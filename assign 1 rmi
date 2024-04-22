@@ -64,3 +64,16 @@ public interface Concat extends Remote
 {  
 	public String concat(String x,String y)throws RemoteException;  
 }  
+
+
+Terminal 1:
+preeti@ubuntu:~/Desktop/rmi$ javac *.java
+preeti@ubuntu:~/Desktop/rmi$ rmic ConcatRemote
+preeti@ubuntu:~/Desktop/rmi$ rmiregistry
+
+Terminal 2:
+preeti@ubuntu:~/Desktop/rmi$ java MyServer
+
+Terminal 3:
+preeti@ubuntu:~/Desktop/rmi$ java MyClient
+
