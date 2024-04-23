@@ -54,3 +54,6 @@ MPI_Send(&local_sum, 1, MPI_INT, 0, 1, MPI_COMM_WORLD);
 MPI_Finalize();
 return 0;
 }
+
+compile: mpicc add.c
+run: mpirun -np 4 ./a.out
